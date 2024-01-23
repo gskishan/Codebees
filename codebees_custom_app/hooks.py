@@ -120,7 +120,7 @@ on_session_creation  = 'codebees_custom_app.login_customization.successful_login
 doc_events = {
 	
 	"User": {
-		"on_update" : "codebees_custom_app.user.on_update",
+		"validate" : "codebees_custom_app.user.validate",
 	},
 	
 	
