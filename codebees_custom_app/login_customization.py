@@ -8,7 +8,7 @@ def successful_login():
     should_force_password_reset =  frappe.get_value('User',user_id, 'last_login')
 
     # Check if the user needs to reset their password
-    if should_force_password_reset:
+    if not should_force_password_reset:
         message = 'Click <a href="/update-password">Reset Your PassWord</a>'
         frappe.throw(message)
 
