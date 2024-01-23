@@ -23,4 +23,4 @@ def should_force_password_reset(user_id):
         if data[0].ct ==1:
             return True,data
         else:
-            return False,[]
+            return False,data
