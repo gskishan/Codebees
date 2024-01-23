@@ -117,14 +117,14 @@ on_session_creation  = 'codebees_custom_app.login_customization.successful_login
 # Document Events
 # ---------------
 # Hook on document methods and events
-
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	
+	"User": {
+		"on_update" : "codebees_custom_app.user.on_update",
+	},
+	
+	
+}
 
 # Scheduled Tasks
 # ---------------
