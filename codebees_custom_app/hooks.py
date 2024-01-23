@@ -117,12 +117,10 @@ on_session_creation  = 'codebees_custom_app.login_customization.successful_login
 # Document Events
 # ---------------
 # Hook on document methods and events
-doc_events = {
-	
-	"User": {
+doc_eve
+    "User": {
 		"validate" : "codebees_custom_app.user.validate",
 	},
-	
 	
 }
 
