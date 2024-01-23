@@ -5,23 +5,18 @@ from frappe import _, msgprint, throw
 @frappe.whitelist(allow_guest=True)
 def successful_login():
     user_id =  frappe.get_value('User', frappe.session.user, 'email')
-
-    # Check if the user needs to reset their password
-    permm,data=should_force_password_reset(user_id)
-    frappe.throw(str(data))
-    if permm:
-        message = 'Click <a href="/update-password">Reset Your PassWord</a>  {0}'.format(str(data))
+    if should_force_password_reset(user_id):
+        message = 'Click <a href="/update-password">Reset Your PassWord</a>  '
         frappe.throw(message)
 
-        # frappe.throw(frappe.AuthenticationError)
-
 def should_force_password_reset(user_id):
-    sql="""select count(user) ct from `tabActivity Log` where user="{0}" and operation="Login" and status="Success" """.format(user_id)
+    sql="""select count(l.user) ct from `tabActivity Log` l inner join `tabUser` u on l.user=u.name where l.user="{0}" and operation="Login"
+and last_login is not null """.format(user_id)
     data=frappe.db.sql(sql,as_dict=1)
     if not data:
-        return True,[]
+        return True
     else:
-        if data[0].ct ==1:
-            return True,data
+        if data[0].ct < 2:
+            return True
         else:
-            return False,data
+            return False
