@@ -16,6 +16,7 @@ def successful_login():
 def should_force_password_reset(user_id):
     sql="""select count(user) ct from `tabSessions` where user="{0}" """.format(user_id)
     data=frappe.db.sql(sql,as_dict=1)
+    frappe.errprint(data)
     if not data:
         frappe.errprint("data")
         return True
