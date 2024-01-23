@@ -8,6 +8,7 @@ def successful_login():
 
     # Check if the user needs to reset their password
     permm,data=should_force_password_reset(user_id)
+    frappe.throw(str(data))
     if permm:
         message = 'Click <a href="/update-password">Reset Your PassWord</a>  {0}'.format(str(data))
         frappe.throw(message)
