@@ -36,7 +36,7 @@ app_license = "mit"
 
 # Home Pages
 # ----------
-on_session_creation  = 'login_customization.successful_login'
+on_session_creation  = 'codebees_custom_app.login_customization.successful_login'
 # application home page (will override Website Settings)
 # home_page = "login"
 
