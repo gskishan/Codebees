@@ -1,5 +1,6 @@
 frappe.ui.form.on('Employee', {
     refresh: function(frm) {
+        console.log("Workinginging")
         // Get the current user's roles
         var userRoles = frappe.user_roles;
         var isSystemManager = userRoles.includes("System Manager");
