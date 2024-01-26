@@ -13,6 +13,8 @@ app_license = "mit"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/codebees_custom_app/css/codebees_custom_app.css"
 # app_include_js = "/assets/codebees_custom_app/js/codebees_custom_app.js"
+app_include_js = "/assets/codebees_custom_app/js/common_script.js"
+
 
 # include js, css files in header of web template
 # web_include_css = "/assets/codebees_custom_app/css/codebees_custom_app.css"
@@ -33,8 +35,7 @@ app_license = "mit"
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
-doctype_js = {"Employee":"custom_script/employee/employee.js"
-}
+doctype_js = {"Employee":"custom_script/employee/employee.js"}
 # Home Pages
 # ----------
 on_session_creation  = 'codebees_custom_app.login_customization.successful_login'
