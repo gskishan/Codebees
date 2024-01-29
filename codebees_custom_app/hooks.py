@@ -35,7 +35,7 @@ app_include_js = "/assets/codebees_custom_app/js/common_script.js"
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
-doctype_js = {"Employee":"custom_script/employee/employee.js"}
+#doctype_js = {"Employee":"custom_script/employee/employee.js"}
 # Home Pages
 # ----------
 on_session_creation  = 'codebees_custom_app.login_customization.successful_login'
