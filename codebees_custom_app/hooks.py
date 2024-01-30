@@ -7,6 +7,13 @@ app_description = "an app for the customization"
 app_email = "gskishan123@gmail.com"
 app_license = "mit"
 
+
+
+app_include_css = [
+	"/assets/dsr/css/custom.css"
+]
+
+
 # Includes in <head>
 # ------------------
 
