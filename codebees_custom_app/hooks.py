@@ -9,10 +9,6 @@ app_license = "mit"
 
 
 
-app_include_css = [
-	"/assets/dsr/css/custom.css"
-]
-
 
 # Includes in <head>
 # ------------------
