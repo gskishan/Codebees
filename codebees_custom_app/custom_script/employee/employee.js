@@ -35,6 +35,7 @@ frappe.ui.form.on('Employee', {
 
 
         if (!isHRManager && !isSystemManager) {
+            $("employee-exit-tab").css("display","none")
             $("#employee-salary_information-tab").css("display", "none");
             $("#employee-connections_tab-tab").css("display","none")
             $("#employee-profile_tab-tab").css("display", "none");
