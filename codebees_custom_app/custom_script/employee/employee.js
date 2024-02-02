@@ -35,15 +35,20 @@ frappe.ui.form.on('Employee', {
 
 
         if (!isHRManager && !isSystemManager) {
-            $("employee-exit-tab").css("display","none")
+           
             $("#employee-salary_information-tab").css("display", "none");
             $("#employee-connections_tab-tab").css("display","none")
             $("#employee-profile_tab-tab").css("display", "none");
+            if (!isHRUser){
+                $("employee-exit-tab").css("display","none") 
+            }
+            
+            
         }
+        
 
-        if (!isHRManager && !isSystemManager && !isHRUser) {
+        if (!isHRManager && !isSystemManager) {
             $("#employee-profile_tab-tab").css("display", "none");
-            $("employee-exit-tab").css("display","none");
         }
         if (!isSystemManager && !isHRManager) {
             // Hide specific sidebar menus
