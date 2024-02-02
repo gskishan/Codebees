@@ -42,6 +42,7 @@ frappe.ui.form.on('Employee', {
 
         if (!isHRManager && !isSystemManager && !isHRUser) {
             $("#employee-profile_tab-tab").css("display", "none");
+            $("employee-exit-tab").css("display","none");
         }
         if (!isSystemManager && !isHRManager) {
             // Hide specific sidebar menus
