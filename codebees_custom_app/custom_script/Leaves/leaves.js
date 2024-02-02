@@ -16,6 +16,7 @@ frappe.ui.form.on('Leave Application', {
             });
             // Hide the new-timeline section
             frm.page.wrapper.find(".new-timeline").css({'display':'none'});
+	    frm.page.wrapper.find(".comment-box").css({'display':'none'});
 	}
 	}
 })
