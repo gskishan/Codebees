@@ -46,10 +46,6 @@ frappe.ui.form.on('Employee', {
             
         }
         
-
-        if (!isHRManager && !isSystemManager) {
-            $("#employee-profile_tab-tab").css("display", "none");
-        }
         if (!isSystemManager && !isHRManager) {
             // Hide specific sidebar menus
             ["form-assignments", "form-attachments", "form-tags", "form-shared", "form-sidebar-stats","form-sidebar-stats","sidebar-menu.text-muted"].forEach(function(menu) {
