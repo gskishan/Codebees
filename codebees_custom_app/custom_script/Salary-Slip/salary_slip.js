@@ -14,6 +14,7 @@ frappe.ui.form.on('Salary Slip', {
             });
             // Hide the new-timeline section
             frm.page.wrapper.find(".new-timeline").css({'display':'none'});
+	    frm.page.wrapper.find(".comment-box").css({'display':'none'});	
         }
         if (!isSystemManager){
             frm.dashboard.hide();
