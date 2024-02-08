@@ -182,13 +182,13 @@ def get_columns():
 			"label": _("Debit_Narration"),
 			"fieldname": "Debit_Narration",
 			"fieldtype": "Data",
-			"width": 120
+			"width": 280
 		},
 		{
 			"label": _("Credit_Narration"),
 			"fieldname": "Credit_Narration",
 			"fieldtype": "Data",
-			"width": 120
+			"width": 280
 		},
 		{
 			"label": _("Payment Details 1"),
