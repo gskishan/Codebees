@@ -50,7 +50,7 @@ def get_columns():
 
 	columns+= [
 		{
-			"fieldname": "Client_Code",
+			"fieldname": "client_code",
 			"fieldtype": "Data",
 			"label": "Client_Code",
 			'width': 120
