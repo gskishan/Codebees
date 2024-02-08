@@ -85,7 +85,7 @@ def get_columns():
 			"fieldtype": "Data",
 			'width': 170
 		},{
-	 		'fieldname': 'Amount',
+	 		'fieldname': 'amount',
 			'label':('Amount'),
 			"fieldtype": "Float",
 			'width': 170
