@@ -17,5 +17,5 @@
  "prepared_report": 0,
  "ref_doctype": "Salary Slip",
  "report_name": "CB Salaries",
- "report_type": "Script Report",
+ "report_type": "Script Report"
 }
