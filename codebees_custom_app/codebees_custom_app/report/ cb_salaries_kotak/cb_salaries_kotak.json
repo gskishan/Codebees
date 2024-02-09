@@ -12,10 +12,10 @@
  "modified": "2024-02-09 09:08:55.011169",
  "modified_by": "Administrator",
  "module": "codebees_custom_app",
- "name": " CB Salaries Kotak",
+ "name": "CB Salaries Kotak",
  "owner": "Administrator",
  "prepared_report": 0,
  "ref_doctype": "Salary Slip",
- "report_name": " CB Salaries Kotak",
+ "report_name": "CB Salaries Kotak",
  "report_type": "Script Report"
 }
