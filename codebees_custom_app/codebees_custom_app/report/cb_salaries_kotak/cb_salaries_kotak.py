@@ -7,25 +7,21 @@ from frappe import _
 def execute(filters=None):
 	cond=data_condtion(filters)
 	sql="""select "CODEBEES" client_code,"VPAY" product_code,"IFT" Payment_Type,"" Payment_Ref_No,posting_date,"" instrument_date,
-"05522000003410" Dr_Ac_No,net_pay as amount,"M" Bank_Code_Indicator,"" Beneficiary_Code, upper(s.employee_name) as Beneficiary_Name,"" Beneficiary_Bank,
-custom_ifsc_code ,bank_account_no Beneficiary_Acc_No,
- CONCAT(
-	UPPER(DATE_FORMAT(start_date, '%M')), 
-	' SALARIES ', 
-	DATE_FORMAT(start_date, '%Y')
-) AS Debit_Narration,
-CONCAT(
-	'SALARY FOR THE MONTH OF ', 
-	UPPER(DATE_FORMAT(start_date, '%M')), 
-	' ', 
-	DATE_FORMAT(start_date, '%Y')
-) AS Credit_Narration
-
-
-
-
- from `tabSalary Slip` s inner join `tabEmployee` e on  s.employee=e.name
- where s.docstatus=1 {0} """.format(cond)
+		"05522000003410" Dr_Ac_No,net_pay as amount,"M" Bank_Code_Indicator,"" Beneficiary_Code, upper(s.employee_name) as Beneficiary_Name,"" Beneficiary_Bank,
+		custom_ifsc_code ,bank_account_no Beneficiary_Acc_No,
+		 CONCAT(
+			UPPER(DATE_FORMAT(start_date, '%M')), 
+			' SALARIES ', 
+			DATE_FORMAT(start_date, '%Y')
+		) AS Debit_Narration,
+		CONCAT(
+			'SALARY FOR THE MONTH OF ', 
+			UPPER(DATE_FORMAT(start_date, '%M')), 
+			' ', 
+			DATE_FORMAT(start_date, '%Y')
+		) AS Credit_Narration
+		 from `tabSalary Slip` s inner join `tabEmployee` e on  s.employee=e.name
+		 where s.docstatus=1 and s.bank_name="Kotak Mahindra bank" {0} """.format(cond)
 	data =frappe.db.sql(sql,as_dict=1)
 	columns = get_columns()
 
