@@ -25,7 +25,7 @@ CONCAT(
 
 
  from `tabSalary Slip` s inner join `tabEmployee` e on  s.employee=e.name
- where s.docstatus=1 {0} """.format(cond)
+ where s.docstatus=1 and s.bank_name!="Kotak Mahindra bank" {0} """.format(cond)
 	data =frappe.db.sql(sql,as_dict=1)
 	columns = get_columns()
 
