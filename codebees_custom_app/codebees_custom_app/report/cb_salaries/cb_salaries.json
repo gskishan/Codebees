@@ -9,7 +9,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2024-02-08 22:01:32.803855",
+ "modified": "2024-02-09 05:58:41.407233",
  "modified_by": "Administrator",
  "module": "codebees_custom_app",
  "name": "CB Salaries",
@@ -18,21 +18,4 @@
  "ref_doctype": "Salary Slip",
  "report_name": "CB Salaries",
  "report_type": "Script Report",
- "roles": [
-  {
-   "role": "Sales User"
-  },
-  {
-   "role": "Sales Manager"
-  },
-  {
-   "role": "Maintenance User"
-  },
-  {
-   "role": "Accounts User"
-  },
-  {
-   "role": "Stock User"
-  }
- ]
 }
