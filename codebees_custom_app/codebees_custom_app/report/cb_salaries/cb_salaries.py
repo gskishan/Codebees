@@ -56,6 +56,12 @@ def get_columns():
 			'width': 120
 		},
 		{
+			"fieldname": "product_code",
+			"fieldtype": "Data",
+			"label": "Product_Code",
+			'width': 120
+		},
+		{
 	 		'fieldname': 'Payment_Type',
 			'label':('Payment_Type'),
 			"fieldtype": "Data",
@@ -188,7 +194,7 @@ def get_columns():
 			"label": _("Credit_Narration"),
 			"fieldname": "Credit_Narration",
 			"fieldtype": "Data",
-			"width": 280
+			"width": 310
 		},
 		{
 			"label": _("Payment Details 1"),
