@@ -10,7 +10,6 @@ function includeCustomJS() {
         }
         if(!hr && !system){
             $("span.custom-btn-group-label:contains('List View')").closest(".btn.ellipsis").attr("hidden", true);
-            $("col-lg-2.layout-side-section").attr("hidden",true);
         }
         console.log("in")
     }, 1000);
