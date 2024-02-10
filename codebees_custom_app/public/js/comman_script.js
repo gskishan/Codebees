@@ -8,3 +8,13 @@ setTimeout(function(){
     }
 }, 600);
 
+
+function handleUrlChange() {
+    // Your custom code to execute when the URL changes
+    console.log("URL changed:", window.location.href);
+}
+
+// Attach the handleUrlChange function to the onpopstate event
+window.onpopstate = handleUrlChange;
+
+
