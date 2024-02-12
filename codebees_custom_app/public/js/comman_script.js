@@ -11,6 +11,17 @@ function includeCustomJS() {
         if(!hr && !system){
             $("span.custom-btn-group-label:contains('List View')").closest(".btn.ellipsis").attr("hidden", true);
         }
+        const url = window.location.href;
+const containsReport = url.includes("report");
+
+if (containsReport) {
+   $("input").prop("readonly", true);
+
+} else {
+  $("input").prop("readonly", false);
+
+}
+
         console.log("in")
     }, 1600);
 }
