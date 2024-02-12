@@ -8,7 +8,7 @@ def execute(filters=None):
 	cond=data_condtion(filters)
 	sql="""select "CODEBEES" client_code,"RPAY" product_code,"NEFT" Payment_Type,"" Payment_Ref_No,posting_date,"" instrument_date,
 "05522000003410" Dr_Ac_No,net_pay as amount,"M" Bank_Code_Indicator,"" Beneficiary_Code, upper(s.employee_name) as Beneficiary_Name,"" Beneficiary_Bank,
-custom_ifsc_code ,bank_account_no Beneficiary_Acc_No,Account_Name,
+custom_ifsc_code ,bank_account_no Beneficiary_Acc_No,custom_account_name,
  CONCAT(
 	UPPER(DATE_FORMAT(start_date, '%M')), 
 	' SALARIES ', 
