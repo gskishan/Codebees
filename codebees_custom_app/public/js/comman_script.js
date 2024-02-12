@@ -15,7 +15,7 @@ function includeCustomJS() {
 const containsReport = url.includes("report");
 
 if (containsReport) {
-   $("input").prop("readonly", true);
+   $("input").prop("readonly", false);
 
 } else {
   $("input").prop("readonly", false);
