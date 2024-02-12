@@ -12,7 +12,7 @@ function includeCustomJS() {
             $("span.custom-btn-group-label:contains('List View')").closest(".btn.ellipsis").attr("hidden", true);
         }
         console.log("in")
-    }, 1000);
+    }, 1600);
 }
 
 $(document).ready(function() {
