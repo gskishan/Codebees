@@ -109,6 +109,12 @@ def get_columns():
 			'fieldtype': 'Data',
 			'width': 160
 		},
+		{
+			'label': _('Account_Name'),
+			'fieldname':  "custom_account_name",
+			'fieldtype': 'Data',
+			'width': 160
+		},
 			{
 			'label': _('Beneficiary_Bank'),
 			'fieldname':  "Beneficiary_Bank",
