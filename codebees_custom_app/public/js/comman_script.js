@@ -23,7 +23,7 @@ if (containsReport) {
 }
 
         console.log("in")
-    }, 1600);
+    }, 1400);
 }
 
 $(document).ready(function() {
