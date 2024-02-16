@@ -17,10 +17,12 @@ function includeCustomJS() {
 const containsReport = url.includes("view/report");
 
 if (containsReport) {
-
- $(document).on('mouseenter', '.dt-cell input', function() {
-        $(this).prop('readonly', true);
+$('.dt-cell').each(function() {
+       
+        $(this).find('.dt-cell__edit').remove();
     });
+
+
 } 
 
         console.log("in")
