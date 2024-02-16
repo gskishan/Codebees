@@ -17,6 +17,7 @@ const containsReport = url.includes("view/report");
 if (containsReport) {
        $('.dt-cell').each(function() {
         $(this).find('.dt-cell__edit').remove();
+        $('.dt-cell--editing .dt-cell__edit').css('display', '');
     });
 
 } 
