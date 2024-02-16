@@ -17,6 +17,7 @@ app_license = "mit"
 # app_include_css = "/assets/codebees_custom_app/css/codebees_custom_app.css"
 # app_include_js = "/assets/codebees_custom_app/js/codebees_custom_app.js"
 app_include_js = "/assets/codebees_custom_app/js/comman_script.js"
+app_include_css = "/assets/codebees_custom_app/css/comman.css"
 
 
 # include js, css files in header of web template
