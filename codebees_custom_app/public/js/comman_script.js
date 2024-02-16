@@ -11,14 +11,8 @@ function includeCustomJS() {
         if(!hr && !system){
             $("span.custom-btn-group-label:contains('List View')").closest(".btn.ellipsis").attr("hidden", true);
         }
-        const url = window.location.href;
-        $('.dt-cell__edit input').prop('readonly', true);
-const containsReport = url.includes("view/report");
 
-if (containsReport) {
     
-
-} 
 
         console.log("in")
     }, 1200);
