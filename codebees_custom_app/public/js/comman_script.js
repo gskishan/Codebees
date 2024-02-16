@@ -12,18 +12,17 @@ function includeCustomJS() {
             $("span.custom-btn-group-label:contains('List View')").closest(".btn.ellipsis").attr("hidden", true);
         }
         const url = window.location.href;
-const containsReport = url.includes("report");
+const containsReport = url.includes("view/report");
 
 if (containsReport) {
-   $("input").prop("readonly", false);
+       $('.dt-cell').each(function() {
+        $(this).find('.dt-cell__edit').remove();
+    });
 
-} else {
-  $("input").prop("readonly", false);
-
-}
+} 
 
         console.log("in")
-    }, 1400);
+    }, 1200);
 }
 
 $(document).ready(function() {
