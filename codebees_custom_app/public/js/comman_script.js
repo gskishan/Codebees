@@ -15,9 +15,7 @@ function includeCustomJS() {
 const containsReport = url.includes("view/report");
 
 if (containsReport) {
-       $('.dt-cell').each(function() {
-        $(this).find('.dt-cell__edit').remove();
-    });
+    
 
 } 
 
