@@ -1,1 +1,3 @@
-
+.dt-cell__edit input {
+    pointer-events: none !important;
+}
