@@ -18,12 +18,13 @@ function includeCustomJS() {
 
 }
 function report_view(){
-    frappe.views.CustomReportView = class extends frappe.views.ReportView {
-  
+   frappe.views.ReportView = class CustomReportView extends frappe.views.ReportView {
     is_editable(df, data) {
+        // Always return false to make all fields non-editable
         return false;
     }
-};
+}
+
 
 }
 
