@@ -16,37 +16,34 @@ function includeCustomJS() {
         console.log("in")
     }, 1200);
 
-     setTimeout(function(){
-               const url = window.location.href;
-      
-const containsReport = url.includes("view/report");
+}
+function report_view(){
+    frappe.views.CustomReportView = class extends frappe.views.ReportView {
+  
+    is_editable(df, data) {
+        return false;
+    }
+};
 
-if (containsReport) {
-$('.dt-cell').each(function() {
-       
-        $(this).find('.dt-cell__edit').remove();
-    });
-
-
-} 
-
-
-          }, 800);
 }
 
 $(document).ready(function() {
     includeCustomJS();
+    report_view()
 });
 
 window.onpopstate = function() {
     includeCustomJS();
+    report_view()
 };
 $(document).ready(function() {
     $('.navbar').on('click', function(event) {
         includeCustomJS();
+        report_view()
     });
 });
 
 document.addEventListener('click', function(event) {
      includeCustomJS();
+    report_view()
 });
