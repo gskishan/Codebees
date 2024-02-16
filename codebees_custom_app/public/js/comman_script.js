@@ -18,11 +18,10 @@ function includeCustomJS() {
 
 }
 function report_view(){
-   frappe.views.ReportView = class CustomReportView extends frappe.views.ReportView {
-    is_editable(df, data) {
-        // Always return false to make all fields non-editable
-        return false;
-    }
+frappe.views.ReportView.prototype.is_editable = function(df, data) {
+    return false;
+};
+
 }
 
 
