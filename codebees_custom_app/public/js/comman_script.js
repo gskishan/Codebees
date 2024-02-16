@@ -12,7 +12,12 @@ function includeCustomJS() {
             $("span.custom-btn-group-label:contains('List View')").closest(".btn.ellipsis").attr("hidden", true);
         }
 
-      const url = window.location.href;
+
+        console.log("in")
+    }, 1200);
+
+     setTimeout(function(){
+               const url = window.location.href;
       
 const containsReport = url.includes("view/report");
 
@@ -25,8 +30,8 @@ $('.dt-cell').each(function() {
 
 } 
 
-        console.log("in")
-    }, 1200);
+
+          }, 800);
 }
 
 $(document).ready(function() {
