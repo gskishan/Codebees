@@ -29,7 +29,10 @@ function report_view(){
 
 $(document).ready(function() {
     includeCustomJS();
+     setTimeout(function(){
     report_view()
+          }, 2000);
+         
 });
 
 window.onpopstate = function() {
