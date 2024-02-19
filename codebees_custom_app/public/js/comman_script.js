@@ -11,15 +11,12 @@ function includeCustomJS() {
         if(!hr && !system){
             $("span.custom-btn-group-label:contains('List View')").closest(".btn.ellipsis").attr("hidden", true);
         }
-
-        console.log("in")
     }, 1200);
 }
 
 function report_view() {
-    // Directly modify the is_editable function of frappe.views.ReportView
     frappe.views.ReportView.prototype.is_editable = function(df, data) {
-        return false; // Always return false to prevent editing
+        return false;
     };
 }
 
@@ -27,19 +24,17 @@ $(document).ready(function() {
     includeCustomJS();
     report_view();
 
-    // Bind to window popstate event
     window.onpopstate = function() {
         includeCustomJS();
         report_view();
     };
 
-    // Bind to navbar click event
     $('.navbar').on('click', function(event) {
         includeCustomJS();
         report_view();
     });
 
-    // Bind to document click event
+
     $(document).on('click', function(event) {
         includeCustomJS();
         report_view();
