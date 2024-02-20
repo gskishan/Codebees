@@ -42,7 +42,7 @@ app_include_css = "/assets/codebees_custom_app/css/comman.css"
 
 doctype_list_js = {
 	"Employee":"custom_script/employee/employee_list.js",
-	"Leave Application":"custom_script/leaves/leave_list.js
+	"Leave Application":"custom_script/leaves/leave_list.js"
 	}
 doctype_js = {"Employee":"custom_script/employee/employee.js"}
 # Home Pages
