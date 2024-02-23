@@ -39,4 +39,9 @@ $(document).ready(function() {
         includeCustomJS();
         report_view();
     });
+    frappe.call('codebees_custom_app.login_customization.redirect_controller').then(r => {
+        if (r.message.data) {
+            frappe.set_route("Form", "Employee", r.message.data)
+        }
+    }).catch(e=>console.log(e, 'ERRR'))
 });

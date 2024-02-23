@@ -1,4 +1,6 @@
 from . import __version__ as app_version
+from frappe.auth import LoginManager
+from codebees_custom_app.login_customization import post_login
 
 app_name = "codebees_custom_app"
 app_title = "codebees_custom_app"
@@ -219,3 +221,5 @@ on_session_creation  = 'codebees_custom_app.login_customization.successful_login
 # auth_hooks = [
 #	"codebees_custom_app.auth.validate"
 # ]
+
+LoginManager.post_login = post_login
