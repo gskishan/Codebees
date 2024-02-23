@@ -46,7 +46,7 @@ doctype_list_js = {
 	"Employee":"custom_script/employee/employee_list.js",
 	"Leave Application":"custom_script/leaves/leave_list.js"
 	}
-doctype_js = {"Employee":"custom_script/employee/employee.js"}
+# doctype_js = {"Employee":"custom_script/employee/employee.js"}
 # Home Pages
 # ----------
 on_session_creation  = 'codebees_custom_app.login_customization.successful_login'
