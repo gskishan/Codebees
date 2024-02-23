@@ -12,5 +12,8 @@ def validate(self, method):
 
 @frappe.whitelist()
 def is_employee():
-    employee = frappe.get_doc("Employee", {"user_id": frappe.session.user})
-    return employee.exists()
+    sql="""select name from `tabEmployee` where user_id="{0}" """.format( frappe.session.use)
+    if frappe.db.sql(sql,as_dict=True):
+        return True
+    else:
+        return False
