@@ -52,7 +52,11 @@ doctype_list_js = {
 on_session_creation  = 'codebees_custom_app.login_customization.successful_login'
 # application home page (will override Website Settings)
 # home_page = "login"
-
+doc_events = {
+    "Holiday List": {
+        "validate":"codebees_custom_app.custom_script.Holiday-List.holiday_list.validate",
+	},	
+}
 # website user home page (by Role)
 # role_home_page = {
 #	"Role": "home_page"
