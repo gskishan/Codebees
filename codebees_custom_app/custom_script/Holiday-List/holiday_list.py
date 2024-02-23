@@ -8,3 +8,9 @@ def validate(self, method):
             hd = self.append("custom_holidays", {})
             hd.description = d.description
             hd.holiday_date = d.holiday_date
+
+
+@frappe.whitelist()
+def is_employee(user):
+    employee = frappe.get_doc("Employee", {"user_id": frappe.session.user})
+    return employee.exists()
