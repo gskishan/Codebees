@@ -11,6 +11,6 @@ def validate(self, method):
 
 
 @frappe.whitelist()
-def is_employee(user):
+def is_employee():
     employee = frappe.get_doc("Employee", {"user_id": frappe.session.user})
     return employee.exists()
