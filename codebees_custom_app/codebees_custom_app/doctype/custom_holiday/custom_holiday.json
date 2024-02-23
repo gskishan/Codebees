@@ -1,8 +1,8 @@
 {
     "actions": [],
-    "creation": "2023-02-22 01:27:46",
+    "allow_rename": 1,
+    "creation": "2024-02-23 20:06:00.656555",
     "doctype": "DocType",
-    "document_type": "Setup",
     "editable_grid": 1,
     "engine": "InnoDB",
     "field_order": [
