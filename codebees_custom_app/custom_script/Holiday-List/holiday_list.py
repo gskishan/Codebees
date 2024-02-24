@@ -14,8 +14,7 @@ def validate(self, method):
 def is_employee():
     sql="""select name from `tabEmployee` where user_id="{0}" """.format( frappe.session.user)
     data=frappe.db.sql(sql,as_dict=True)
-    frappe.errprint(sql)
     if data:
-        return data
+        return True
     else:
         return False
