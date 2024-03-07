@@ -6,21 +6,9 @@ from frappe.auth import validate_ip_address
 @frappe.whitelist(allow_guest=True)
 def successful_login():
     user_id =  frappe.get_value('User', frappe.session.user, 'email')
-    if should_force_password_reset(user_id):
+    if  not frappe.db.get_value('User', user_id, 'last_password_reset_date'):
         message = 'Click <a href="/update-password">Reset Your PassWord</a>  '
         frappe.throw(message)
-
-def should_force_password_reset(user_id):
-    sql="""select count(l.user) ct from `tabActivity Log` l inner join `tabUser` u on l.user=u.name where l.user="{0}" and operation="Login"
-and last_login is not null """.format(user_id)
-    data=frappe.db.sql(sql,as_dict=1)
-    if not data:
-        return True
-    else:
-        if data[0].ct < 2:
-            return True
-        else:
-            return False
 
 
 @frappe.whitelist(allow_guest=True)
