@@ -11,7 +11,7 @@ function includeCustomJS() {
         if(!hr && !system){
             $("span.custom-btn-group-label:contains('List View')").closest(".btn.ellipsis").attr("hidden", true);
         }
-    }, 1200);
+    }, 1000);
 }
 
 function report_view() {
