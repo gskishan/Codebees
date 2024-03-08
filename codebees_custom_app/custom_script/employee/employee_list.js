@@ -9,6 +9,7 @@ frappe.listview_settings['Employee'] = {
             $('span.sidebar-toggle-btn').hide();
             $(".layout-side-section").hide();
             $('span.page-icon-group.hidden-xs.hidden-sm').hide();
+            $('menu-btn-group').hide()
         }
 
 
