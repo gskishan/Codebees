@@ -7,9 +7,9 @@ from frappe.auth import validate_ip_address
 def successful_login():
     user_id =  frappe.get_value('User', frappe.session.user, 'email')
     if  not frappe.db.get_value('User', user_id, 'last_password_reset_date'):
-        pass
-        # message = 'Click <a href="/update-password">Reset Your PassWord</a>  '
-        # frappe.throw(message)
+        # pass
+        message = 'Click <a href="/update-password">Reset Your PassWord</a>  '
+        frappe.throw(message)
 
 
 @frappe.whitelist(allow_guest=True)
