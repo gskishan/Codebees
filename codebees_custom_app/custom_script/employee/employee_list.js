@@ -6,6 +6,9 @@ frappe.listview_settings['Employee'] = {
         var system = userRoles.includes("System Manager");
         if(!hr && !system){
             $("span.custom-btn-group-label:contains('List View')").closest(".btn.ellipsis").attr("hidden", true);
+            $('span.sidebar-toggle-btn').hide();
+            $(".layout-side-section").hide();
+            $('span.page-icon-group.hidden-xs.hidden-sm').hide();
         }
 
 
