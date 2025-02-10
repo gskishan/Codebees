@@ -55,7 +55,10 @@ on_session_creation  = 'codebees_custom_app.login_customization.successful_login
 doc_events = {
     "Holiday List": {
         "validate":"codebees_custom_app.custom_script.Holiday-List.holiday_list.validate",
-	},	
+	},
+	"Leave Application":{
+		   "validate":"codebees_custom_app.custom_script.leave_application.leave_application.validate",
+	}
 }
 # website user home page (by Role)
 # role_home_page = {
